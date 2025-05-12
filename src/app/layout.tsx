@@ -1,12 +1,15 @@
-import Home from '@/pages/Home';
-import "./globals.css";
+import './globals.css';
+import type { Metadata } from 'next';
 
-export default function RootLayout() {
+export const metadata: Metadata = {
+  title: 'Lira Yore',
+  description: 'Elevate Your Style with Timeless Elegance',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-      <Home />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
